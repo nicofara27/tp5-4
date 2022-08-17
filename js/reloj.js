@@ -41,14 +41,19 @@ function obtenerFecha() {
     segundos = "0" + segundos;
   }
 
+  let minutos = fechaActual.getMinutes();
+  if (segundos < 10) {
+    minutos = "0" + minutos;
+  }
+
   //Muestra la hora en el formato am, si es 0 lo cambia por 12 y si es entre 1 y 9 le agrega un 0 adelante
   if (fechaActual.getHours() < 12) {
     if (fechaActual.getHours() === 0) {
-      tiempo.innerHTML = `12:${fechaActual.getMinutes()}:${segundos} am`;
+      tiempo.innerHTML = `12:${minutos}:${segundos} am`;
     }else if(fechaActual.getHours() >= 1 && fechaActual.getHours() <= 9) {
-      tiempo.innerHTML = `${fechaActual.getHours()}:${"0" + fechaActual.getMinutes()}:${segundos} am`;
+      tiempo.innerHTML = `${fechaActual.getHours()}:${"0" + minutos}:${segundos} am`;
     } else {
-        tiempo.innerHTML = `${fechaActual.getHours()}:${fechaActual.getMinutes()}:${segundos} am`;
+        tiempo.innerHTML = `${fechaActual.getHours()}:${minutos}:${segundos} am`;
     }
   //Si la hora es entre 13 y 23 cambia su formato para mostrarla entre 01 y 11 pm
   } else {

@@ -64,3 +64,29 @@ function obtenerFecha() {
 }
 
 setInterval(obtenerFecha, 1000);
+
+function switchColor() {
+  let boton = document.querySelector("button");
+  let body = document.querySelector("body");
+  let reloj = document.getElementById("titulo");
+
+  if(body.classList.contains("bg-black")) {
+    body.className = "bg-light";
+  } else {
+    body.className = "bg-black";
+  }
+
+  if(boton.classList.contains("bi-brightness-high")) {
+    boton.className = "bi bi-moon bg-light text-dark my-2 me-4";
+  } else {
+    boton.className = "bi bi-brightness-high bg-black text-light my-2 me-4";
+  }
+
+  if(titulo.classList.contains("text-light")) {
+    titulo.className = "text-danger text-center";
+  } else {
+    titulo.className = "text-light text-center";
+  }
+
+
+}

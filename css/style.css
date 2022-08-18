@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-body{
-    background: #000;
-}
 
-.titulo{
-    color: #fff;
+#titulo{
     font-size: 4em;
     font-family: 'Orbitron', sans-serif;
     padding-top: 30vh;
@@ -15,4 +11,9 @@ body{
     0 0 40px #fd9167,
     0 0 80px #fd9167,
     0 0 90px #fd9167;
+}
+
+button {
+    font-size: 2em;
+    border: none;
 }
